@@ -268,7 +268,7 @@ a {
   position: relative;
   border-radius: 0;
   overflow: hidden;
-  min-height: 60vh;
+  height: 70vh;
   border: none;
 }
 
