@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   color-scheme: dark;
   --bg: #301934;
@@ -255,9 +259,9 @@ a {
 }
 
 .course-page {
-  padding: 0 8vw 90px;
+  padding: 0 8vw 96px;
   display: grid;
-  gap: 32px;
+  gap: 96px;
 }
 
 .course-hero {
@@ -345,6 +349,78 @@ a {
   gap: 24px;
 }
 
+.embed-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.embed-item {
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+}
+
+.embed-item h2 {
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  text-align: center;
+}
+
+.embed-single {
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+}
+
+.embed-single h2 {
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  text-align: center;
+}
+
+.embed-single .embed-frame {
+  max-width: 1080px;
+}
+
+.embed-frame {
+  background: #2a1430;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 8.5 / 10.5;
+  width: 100%;
+  max-width: 720px;
+  min-width: 280px;
+}
+
+.embed-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.presentation-embed {
+  margin: 24px auto 32px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.presentation-frame {
+  background: #2a1430;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+.presentation-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
 .info-card {
   background: #2a1430;
   padding: 24px;
@@ -417,8 +493,16 @@ a {
     gap: 14px;
   }
 
+  .embed-pair {
+    grid-template-columns: 1fr;
+  }
+
   .catalog-dropdown {
     right: 50%;
     transform: translateX(50%);
   }
+}
+
+.embed-frame-wide {
+  aspect-ratio: 10.5 / 8.5;
 }
